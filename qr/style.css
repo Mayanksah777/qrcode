@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+body{
+    background: black;
+}
+.container
+{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-radius: 10px;
+}
+.container p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.container input /* target to style input of class container*/
+{
+    width: 100%;
+    height: 50px;
+    border: 1px solid  black;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+ .container button{
+   width: 100%;
+   height: 50px;
+   background:  blue; 
+   color: white;
+   border: 0;
+   outline: 0;
+   border-radius: 5px;
+   box-shadow: 0 10px 10px rgb(0,0,0,0.1);
+   cursor: pointer;
+   margin: 20px 0;
+   font-weight: 500;
+ }
+ #imgbox 
+ {
+    width:200px;
+    border-radius: 5px;
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 1s;
+
+
+ }
+ #imgbox img{
+    width: 100%;
+    padding: 10px;
+
+ }
+ 
+ #imgbox.show-img  /* this class is applied when qr code is showing */
+ {
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid black;
+ }
+
+ .error /*add animation*/
+ {
+    animation: shake 0.1s linear 10;
+
+ }
+ @keyframes shake 
+ {
+    0%{
+        transform: translateX(0) ; /*at 0% element is in orignal position*/
+    } 
+    25%{
+        transform: translateX(-2px) ;/*at 25% element move 2px left position*/
+    } 
+    50%{
+        transform: translateX(0);/*at 50% element is in orignal position*/
+    } 
+    75%{
+        transform: translateX(2px) ;/*at 75% element move 2px right position*/
+    }  
+    100%{
+        transform: translateX(0) ;/*at 100% element is in orignal position*/
+    } 
+ }
+ /* key frames define css animation*/
+ /*transform property allow you to move*/
+ /*move horizontal at x axis on a given specified value*/
+/*0% start of animation and 100% at end*/
